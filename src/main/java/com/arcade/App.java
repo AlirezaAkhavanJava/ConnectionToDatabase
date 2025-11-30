@@ -1,13 +1,16 @@
 package com.arcade;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+
+import com.arcade.jdbc.ConnectionConfig;
+
+import java.sql.SQLException;
+
+public class App {
+    public static void main(String[] args) {
+        try {
+            ConnectionConfig.operate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
