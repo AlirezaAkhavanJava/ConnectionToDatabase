@@ -12,3 +12,14 @@ UPDATE APP_DB SET name = ? WHERE name = 'Shampoo' [90002-232]
 	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:130)
 	at com.arcade.jdbc.ConnectionConfig.operate(ConnectionConfig.java:24)
 	at com.arcade.App.main(App.java:11)
+2025-11-30 08:56:48.686909+03:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Invalid value "2" for parameter "parameterIndex" [90008-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1396)
+	at org.h2.jdbc.JdbcPreparedStatement.setObject(JdbcPreparedStatement.java:506)
+	at com.arcade.jdbc.ConnectionConfig.queryExecutor(ConnectionConfig.java:17)
+	at com.arcade.jdbc.ConnectionConfig.operate(ConnectionConfig.java:36)
+	at com.arcade.App.main(App.java:11)
